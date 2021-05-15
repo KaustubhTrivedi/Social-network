@@ -1,1 +1,1 @@
-The complete project is working with firebase as backend.
+Welcome to my Instagram Clone based on React and Firebase
