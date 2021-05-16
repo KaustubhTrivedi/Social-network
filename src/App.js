@@ -131,6 +131,9 @@ function App() {
           x
         />
 
+        <div>
+          <strong>Welcome to Kaustubh's World☺☺☺</strong>
+        </div>
         {user ? (
           <Button onClick={signOut}>Logut</Button>
         ) : (
@@ -147,6 +150,7 @@ function App() {
             <Post
               key={id}
               postId={id}
+              user={user}
               username={post.username}
               caption={post.caption}
               imageUrl={post.imageUrl}
