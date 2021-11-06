@@ -1,1 +1,1 @@
-Welcome to my Instagram Clone based on React and Firebase
+In this project I demonstrate my knowledge of ReactJS and Firebase services.
