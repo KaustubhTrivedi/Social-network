@@ -132,7 +132,7 @@ function App() {
         />
 
         <div>
-          <strong>Welcome to Kaustubh's World☺☺☺</strong>
+          <strong>My social media project</strong>
         </div>
         {user ? (
           <Button onClick={signOut}>Logut</Button>
