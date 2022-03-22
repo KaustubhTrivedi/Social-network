@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import BlueBerry from '../src/images/blueberry.svg'
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { Button, Input } from "@material-ui/core";
@@ -43,9 +44,9 @@ function App() {
   const [user, setUser] = useState(null);
   //---------------------------//
 
-  useEffect(()=> {
-    document.title="Instagram"
-  },[])
+  useEffect(() => {
+    document.title = "Social Media"
+  }, [])
   //user authentication starts
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -124,16 +125,17 @@ function App() {
   return (
     <div className="App">
       <div className="app__header app__logoHeader">
-        <img
-          className="app_headerImage"
-          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-          alt="headerImage"
-          x
-        />
-
         <div>
-          <strong>My social media project</strong>
+          <img
+            className="app_headerImage"
+            src={BlueBerry}
+            width={250}
+            height={60}
+            alt="headerImage"
+          />
+          {/* <span ><strong>Blue Berries</strong></span> */}
         </div>
+
         {user ? (
           <Button onClick={signOut}>Logut</Button>
         ) : (
@@ -144,6 +146,13 @@ function App() {
         )}
       </div>
 
+      <div className="app__imageUpload">
+        {user ? (
+          <ImageUpload username={user.displayName} />
+        ) : (
+          <h3>You need to login to upload</h3>
+        )}
+      </div>
       <div className="app__posts">
         <div className="app_postsLeft">
           {posts.map(({ id, post }) => (
@@ -239,13 +248,7 @@ function App() {
           </center>
         </div>
       </Modal>
-      <div className="app__imageUpload">
-        {user ? (
-          <ImageUpload username={user.displayName} />
-        ) : (
-          <h3>You need to login to upload</h3>
-        )}
-      </div>
+
     </div>
   );
 }

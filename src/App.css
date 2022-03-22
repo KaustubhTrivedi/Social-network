@@ -1,46 +1,49 @@
-*{
+* {
   margin: 2px;
 }
-.app{
+.app {
   background-color: #fafafa;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: 15px;
   text-align: center;
 }
-.app__posts{
+.app__posts {
   display: flex;
   padding: 5px;
   justify-content: center;
 }
-.app__header{
+.app__header {
   display: flex;
   justify-content: space-between;
+  /* margin: 0px 200px 0 200px;  */
   background-color: white;
   padding: 1.25rem;
   border-bottom: 0.063rem solid lightgray;
   object-fit: contain;
 }
-.app_postsRight{
+.app_postsRight {
   margin-left: 5px;
 }
-.app__imageUpload{
+.app__imageUpload {
   width: 100%;
 }
 
-.app__signup{
+.app__signup {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.app__headerImage{
+.app__headerImage {
   object-fit: contain;
 }
-.app__userDisplay{
+.app__userDisplay {
   margin: 1.5rem;
 }
-
-.modal{
+.titleFont {
+  font-size: 3rem;
+}
+.modal {
   backdrop-filter: blur(8px);
 }
